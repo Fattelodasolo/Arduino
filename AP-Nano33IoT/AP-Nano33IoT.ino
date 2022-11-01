@@ -62,7 +62,7 @@ void loop() {
       if (client.available()) {             // se ci sono byte da leggere dal client,
         char c = client.read();             // leggi un byte, poi
         Serial.write(c);                    // stampalo su Seriale
-        if (c == '\n') {                    // se il byte è il carattere di nuova linea
+        if (c == '\n') {                    // se il byte è il carattere di nuova riga
 
           // se la riga corrente è vuota, hai due caratteri di nuova riga di seguito.
           // questa è la fine della richiesta HTTP del client, quindi invia una risposta:
@@ -75,7 +75,7 @@ void loop() {
 
             // il contenuto della risposta HTTP segue l'intestazione:
             client.print("Clicca <a href=\"/H\">QUI</a> per accendere il LED<br>");
-            client.print("Click <a href=\"/L\">QUI</a> per spegnere il LED<br>");
+            client.print("Clicca <a href=\"/L\">QUI</a> per spegnere il LED<br>");
 
             // La risposta HTTP termina con un'altra riga vuota:
             client.println();
