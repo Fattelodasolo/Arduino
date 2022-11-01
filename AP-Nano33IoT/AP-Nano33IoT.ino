@@ -86,7 +86,7 @@ void loop() {
             currentLine = "";
           }
         }
-        else if (c != '\r') {    // se si riceve il carattere di Ritorno Carrello,
+        else if (c != '\r') {    // se non si riceve il carattere di Ritorno Carrello,
           currentLine += c;      // lo si aggiunge a currentLine
         }
 
